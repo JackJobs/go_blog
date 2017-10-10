@@ -37,6 +37,7 @@ func init() {
 	// revel.OnAppStart(FillCache)\
 
 	revel.TemplateFuncs["pls"] = func(a, b int) int { return a + b }
+	revel.TemplateFuncs["mo"] = func(a, b int) bool { return a%b==0 }
 }
 
 // HeaderFilter adds common security headers

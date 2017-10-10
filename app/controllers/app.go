@@ -49,6 +49,19 @@ func (c App) BlogInfor(id string, rcnt int) revel.Result {
 	return c.Render(blog, rcnt, comments)
 }
 
+func (c App) Message() revel.Result {
+	dao, err := models.NewDao()
+	if err != nil {
+		c.Response.Status = 500
+		return c.RenderError(err)
+	}
+	defer dao.Close()
+	//dao := models.NewDao(c.MongoSession)
+	messages := dao.FindAllMessages()
+	return c.Render(messages)
+	return c.Render()
+}
+
 
 
 

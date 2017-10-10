@@ -138,3 +138,6 @@ a.cell-subject-title:hover{
     border-width: 2px;
     color: #BBB6B6;
 }
+.ctextarea {
+    height: 66px !important;
+}

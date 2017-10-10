@@ -12,6 +12,9 @@ GET     /write                                  App.WBlog
 POST    /putblog                                WBlog.Putup
 GET     /bloginfor/:id/:rcnt                    App.BlogInfor
 POST    /docomment                              WComment.Docomment
+GET     /message                                App.Message
+POST    /putmessage                             WMessage.Putup
+
 
 # Ignore favicon requests
 GET     /favicon.ico                            404
