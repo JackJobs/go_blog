@@ -1,21 +1,31 @@
 {{set . "title" "Home"}}
+{{set . "home" "active"}}
 {{template "header.html" .}}
 
-<header class="jumbotron" style="background-color:#A9F16C">
-  <div class="container">
-    <div class="row">
-      <h1>It works!</h1>
-      <p></p>
+<div class="content">
+    {{if .blogs}}
+    {{range $blog := .blogs}}
+    <div class="cell">
+        <div class="cell-subject">
+            <div>
+                <a href="/bloginfo/{{$blog.Id.Hex}}/{{$blog.ReadCnt}}" title="{{$blog.Title}}"
+                   class="cell-subject-title">
+                    <strang>{{$blog.GetShortTitle}}</strang>
+                </a>
+                <a href="#" class="comment-num" title="Comments">{{$blog.CommentCnt}}</a>
+            </div>
+            <div class="subject-infor">
+                <span class="label label-success">Author</span> <span>{{$blog.Email}}</span>
+                <span class="label label-default">Date</span> {{$blog.CDate.Format "2017-11-06 10:27"}}
+                <span class="label label-info">Read</span> {{$blog.ReadCnt}}
+            </div>
+        </div>
+        <div class="cell-text">
+            <pre><code>{{$blog.GetShortContent}}</code></pre>
+        </div>
     </div>
-  </div>
-</header>
-
-<div class="container">
-  <div class="row">
-    <div class="span6">
-      {{template "flash.html" .}}
-    </div>
-  </div>
+    {{end}}
+    {{end}}
 </div>
 
 {{template "footer.html" .}}
