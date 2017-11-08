@@ -29,8 +29,6 @@ func (c WBlog) Putup(blog *models.Blog) revel.Result {
 	defer dao.Close()
 	err = dao.CreateBlog(blog)
 	println("create blog")
-	//println(err)
-	//fmt.Printf("%v", err)
 	if err != nil {
 		c.Response.Status = 500
 		return c.RenderError(err)

@@ -34,7 +34,9 @@ func init() {
 	// ( order dependent )
 	// revel.OnAppStart(ExampleStartupScript)
 	// revel.OnAppStart(InitDB)
-	// revel.OnAppStart(FillCache)
+	// revel.OnAppStart(FillCache)\
+
+	revel.TemplateFuncs["pls"] = func(a, b int) int { return a + b }
 }
 
 // HeaderFilter adds common security headers

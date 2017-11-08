@@ -59,6 +59,22 @@ func (dao *Dao) FindBlogs() []Blog {
 	return blogs
 }
 
+func (dao *Dao) FindBlogById(id string) *Blog {
+	blogCollection := dao.session.DB(DbName).C(BlogCollection)
+	blog := new(Blog)
+	query := blogCollection.Find(bson.M{"id": bson.ObjectIdHex(id)})
+	query.One(blog)
+	return blog
+}
+
+func (dao *Dao) UpdateBlogById(id string, blog *Blog)  {
+	blogCollection := dao.session.DB(DbName).C(BlogCollection)
+	err := blogCollection.Update(bson.M{"id": bson.ObjectIdHex(id)}, blog)
+	if err != nil {
+		revel.WARN.Printf("Unable to update blog: %v error %v", blog, err)
+	}
+}
+
 func (blog *Blog) GetShortTitle() string {
 	if len(blog.Title) > 35 {
 		return blog.Title[:35]
@@ -72,3 +88,32 @@ func (blog *Blog) GetShortContent() string {
 	}
 	return blog.Subject
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

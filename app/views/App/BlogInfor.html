@@ -1,0 +1,64 @@
+{{set . "title" "blog info"}}
+{{set . "home" "active"}}
+{{template "header.html" .}}
+<div class="content">
+    <div class="infor-content">
+        <div class="infor-header">
+            <h3>Title</h3>
+            <div class="subject-infor">
+                <span class="label label-success">Author</span> <span>{{.blog.Email}}</span>
+                <span class="label label-default">Date</span> <span>{{.blog.CDate.Format "2006-01-02 15:04"}}</span>
+                <span class="label label-info">Read</span> <span>{{.blog.ReadCnt}}</span>
+            </div>
+        </div>
+        <div class="infor-body">
+            {{.blog.Subject}}
+        </div>
+    </div>
+    {{if .comments}}
+    <div class="comments">
+        <span>Reply</span>
+        <hr>
+        <dl class="the-comments"></dl>
+        {{range $index, $comment := .comments}}
+        <dd>
+            <span class="label label-default pull-right">#{{pls $index 1}}</span>
+            <div class="user-info">
+                <a href="#"><strong>{{$comment.Email}}</strong></a> |
+                {{$comment.CDate.Format "2006-01-02 15:04"}}
+            </div>
+            <div class="user-comment">
+                <p>{{$comment.Content}}</p>
+            </div>
+        </dd>
+        {{end}}
+    </div>
+    {{end}}
+    <div class="comments">
+        <div class="comment-form">
+            <form action="/docomment" method="post">
+                <input type="hidden" name="id" value="{{.blog.Id.Hex}}">
+                <input type="hidden" name="rcnt" value="{{.rcnt}}">
+                <div class="form-group">
+                    <label>Email</label>
+                    {{with $field := field "comment.Email" .}}
+                    <input type="email" class="form-control" name="{{$field.Name}}"
+                           placeholder="Your email" required value="{{if $field.Flash}}{{$field.Flash}}{{else}}{{$field.Value}}{{end}}">
+                    <span class="help-inline erro">{{$field.Error}}</span>
+                    {{end}}
+                </div>
+                <div class="form-group">
+                    <label>Comment</label>
+                    {{with $field := field "comment.Content" .}}
+                    <textarea class="form-control" name="{{$field.Name}}" rows="6"
+                              placeholder="Enter the comment" required >{{if $field.Flash}}{{$field.Flash}}{{else}}{{$field.Value}}{{end}}</textarea>
+                    {{end}}
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-success">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{{template "footer.html" .}}
