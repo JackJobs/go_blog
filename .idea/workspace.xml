@@ -6,7 +6,6 @@
       <change beforePath="$PROJECT_DIR$/app/controllers/app.go" afterPath="$PROJECT_DIR$/app/controllers/app.go" />
       <change beforePath="$PROJECT_DIR$/app/models/blog.go" afterPath="$PROJECT_DIR$/app/models/blog.go" />
       <change beforePath="$PROJECT_DIR$/app/views/header.html" afterPath="$PROJECT_DIR$/app/views/header.html" />
-      <change beforePath="$PROJECT_DIR$/conf/routes" afterPath="$PROJECT_DIR$/conf/routes" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,10 +19,10 @@
       <file leaf-file-name="app.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/app.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="517">
-              <caret line="72" column="26" lean-forward="true" selection-start-line="72" selection-start-column="26" selection-end-line="72" selection-end-column="26" />
+            <state relative-caret-position="-1455">
+              <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
               <folding>
-                <element signature="e#21#78#0" expanded="true" />
+                <element signature="e#21#86#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -43,11 +42,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="blog.go" pinned="false" current-in-tab="false">
+      <file leaf-file-name="blog.go" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/models/blog.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="197">
-              <caret line="91" column="16" lean-forward="false" selection-start-line="91" selection-start-column="16" selection-end-line="91" selection-end-column="16" />
+            <state relative-caret-position="3103">
+              <caret line="107" column="1" lean-forward="false" selection-start-line="107" selection-start-column="1" selection-end-line="107" selection-end-column="1" />
               <folding>
                 <element signature="e#16#84#0" expanded="true" />
               </folding>
@@ -68,8 +67,8 @@
       <file leaf-file-name="header.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/header.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="573">
-              <caret line="35" column="55" lean-forward="false" selection-start-line="35" selection-start-column="55" selection-end-line="35" selection-end-column="55" />
+            <state relative-caret-position="486">
+              <caret line="32" column="35" lean-forward="false" selection-start-line="32" selection-start-column="35" selection-end-line="32" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -109,11 +108,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="history.go" pinned="false" current-in-tab="true">
+      <file leaf-file-name="history.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/history.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="720">
-              <caret line="50" column="5" lean-forward="true" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
+            <state relative-caret-position="633">
+              <caret line="50" column="5" lean-forward="false" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
               <folding>
                 <element signature="e#16#84#0" expanded="true" />
               </folding>
@@ -125,7 +124,7 @@
         <entry file="file://$PROJECT_DIR$/conf/routes">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="464">
-              <caret line="16" column="59" lean-forward="true" selection-start-line="16" selection-start-column="59" selection-end-line="16" selection-end-column="59" />
+              <caret line="16" column="59" lean-forward="false" selection-start-line="16" selection-start-column="59" selection-end-line="16" selection-end-column="59" />
               <folding />
             </state>
           </provider>
@@ -171,12 +170,12 @@
         <option value="$PROJECT_DIR$/app/controllers/wmessage.go" />
         <option value="$PROJECT_DIR$/app/views/App/Message.html" />
         <option value="$PROJECT_DIR$/public/css/style.css" />
-        <option value="$PROJECT_DIR$/app/models/blog.go" />
-        <option value="$PROJECT_DIR$/app/controllers/app.go" />
         <option value="$PROJECT_DIR$/conf/routes" />
         <option value="$PROJECT_DIR$/app/models/history.go" />
         <option value="$PROJECT_DIR$/app/views/App/History.html" />
+        <option value="$PROJECT_DIR$/app/controllers/app.go" />
         <option value="$PROJECT_DIR$/app/views/header.html" />
+        <option value="$PROJECT_DIR$/app/models/blog.go" />
       </list>
     </option>
   </component>
@@ -187,8 +186,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="221" />
-    <option name="y" value="361" />
+    <option name="x" value="119" />
+    <option name="y" value="466" />
     <option name="width" value="1807" />
     <option name="height" value="1025" />
   </component>
@@ -315,7 +314,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329718" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32899022" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -376,7 +375,7 @@
         <state relative-caret-position="406">
           <caret line="16" column="1" lean-forward="false" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
           <folding>
-            <element signature="e#21#78#0" expanded="true" />
+            <element signature="e#21#86#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -437,7 +436,7 @@
         <state relative-caret-position="870">
           <caret line="30" column="21" lean-forward="false" selection-start-line="30" selection-start-column="21" selection-end-line="30" selection-end-column="21" />
           <folding>
-            <element signature="e#16#45#0" expanded="true" />
+            <element signature="e#16#45#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -457,7 +456,7 @@
         <state relative-caret-position="406">
           <caret line="16" column="1" lean-forward="false" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
           <folding>
-            <element signature="e#21#78#0" expanded="true" />
+            <element signature="e#21#86#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -589,7 +588,7 @@
         <state relative-caret-position="1653">
           <caret line="57" column="0" lean-forward="false" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
           <folding>
-            <element signature="e#16#45#0" expanded="true" />
+            <element signature="e#16#45#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -690,15 +689,7 @@
     <entry file="file://$PROJECT_DIR$/conf/routes">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="464">
-          <caret line="16" column="59" lean-forward="true" selection-start-line="16" selection-start-column="59" selection-end-line="16" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/header.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="573">
-          <caret line="35" column="55" lean-forward="false" selection-start-line="35" selection-start-column="55" selection-end-line="35" selection-end-column="55" />
+          <caret line="16" column="59" lean-forward="false" selection-start-line="16" selection-start-column="59" selection-end-line="16" selection-end-column="59" />
           <folding />
         </state>
       </provider>
@@ -715,30 +706,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/blog.go">
+    <entry file="file://$PROJECT_DIR$/app/models/history.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="91" column="16" lean-forward="false" selection-start-line="91" selection-start-column="16" selection-end-line="91" selection-end-column="16" />
+        <state relative-caret-position="633">
+          <caret line="50" column="5" lean-forward="false" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
           <folding>
             <element signature="e#16#84#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/header.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="32" column="35" lean-forward="false" selection-start-line="32" selection-start-column="35" selection-end-line="32" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/app.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="517">
-          <caret line="72" column="26" lean-forward="true" selection-start-line="72" selection-start-column="26" selection-end-line="72" selection-end-column="26" />
+        <state relative-caret-position="-1455">
+          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding>
-            <element signature="e#21#78#0" expanded="true" />
+            <element signature="e#21#86#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/history.go">
+    <entry file="file://$PROJECT_DIR$/app/models/blog.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="50" column="5" lean-forward="true" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
+        <state relative-caret-position="3103">
+          <caret line="107" column="1" lean-forward="false" selection-start-line="107" selection-start-column="1" selection-end-line="107" selection-end-column="1" />
           <folding>
             <element signature="e#16#84#0" expanded="true" />
           </folding>

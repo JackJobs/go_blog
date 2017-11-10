@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <html>
-  <head>
+<head>
     <title>{{.title}}</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,40 +10,44 @@
     <link rel="shortcut icon" type="image/png" href="/public/img/favicon.png">
     <script src="/public/js/jquery-2.2.4.min.js"></script>
     <script src="/public/js/bootstrap-3.3.6.min.js"></script>
-    {{range .moreStyles}}
-      <link rel="stylesheet" type="text/css" href="/public/{{.}}">
-    {{end}}
-    {{range .moreScripts}}
-      <script src="/public/{{.}}" type="text/javascript" charset="utf-8"></script>
-    {{end}}
-  </head>
-  <body>
-  <div class="container main-nav">
+{{range .moreStyles}}
+    <link rel="stylesheet" type="text/css" href="/public/{{.}}">
+{{end}}
+{{range .moreScripts}}
+    <script src="/public/{{.}}" type="text/javascript" charset="utf-8"></script>
+{{end}}
+</head>
+<body>
+<div class="container main-nav">
     <div class="top-bar">
-      <div class="top-bar-inner">
-        <ul class="ul-nav ">
-          <li class="{{.home}}">
-            <a href="/" >首页</a>
-            <span class="navbar-news " title="There is an update in the last 1 hours">1</span>
-          </li>
-          <li class="{{.write}}">
-            <a href="/write" title="Put up your blogs">博客</a>
-          </li>
-          <li class="{{.mess}}">
-            <a href="/message" title="Message Boards">留言</a>
-          </li>
-          <li class="{{.history}}">
-            <a href="/history" title="History blogs">归档</a>
-          </li>
-          <li class="{{.about}}">
-            <a href="/about" title="About Me">关于</a>
-          </li>
-          <li class="{{.ema}}">
-            <a href="/email" title="The emails of the blog's author">联系</a>
-          </li>
-          <li>
-            <a href="#" title="">RSS</a>
-          </li>
-        </ul>
-      </div>
+        <div class="top-bar-inner">
+            <ul class="ul-nav ">
+                <li class="{{.home}}">
+                    <a href="/">首页</a>
+                {{if .recentCnt}}
+                {{if gt .recentCnt 0}}
+                    <span class="navbar-news " title="There is an update in the last 1 hours">{{.recentCnt}}</span>
+                {{end}}
+                {{end}}
+                </li>
+                <li class="{{.write}}">
+                    <a href="/write" title="Put up your blogs">博客</a>
+                </li>
+                <li class="{{.mess}}">
+                    <a href="/message" title="Message Boards">留言</a>
+                </li>
+                <li class="{{.history}}">
+                    <a href="/history" title="History blogs">归档</a>
+                </li>
+                <li class="{{.about}}">
+                    <a href="/about" title="About Me">关于</a>
+                </li>
+                <li class="{{.ema}}">
+                    <a href="/email" title="The emails of the blog's author">联系</a>
+                </li>
+                <li>
+                    <a href="#" title="">RSS</a>
+                </li>
+            </ul>
+        </div>
     </div>

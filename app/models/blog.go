@@ -67,7 +67,7 @@ func (dao *Dao) FindBlogById(id string) *Blog {
 	return blog
 }
 
-func (dao *Dao) UpdateBlogById(id string, blog *Blog)  {
+func (dao *Dao) UpdateBlogById(id string, blog *Blog) {
 	blogCollection := dao.session.DB(DbName).C(BlogCollection)
 	err := blogCollection.Update(bson.M{"id": bson.ObjectIdHex(id)}, blog)
 	if err != nil {
@@ -97,31 +97,12 @@ func (dao *Dao) FindBlogsByYear(year int) []Blog {
 	return blogs
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+func (dao *Dao) FindBlogsByDate(start time.Time) int {
+	blogCollection := dao.session.DB(DbName).C(BlogCollection)
+	query := blogCollection.Find(bson.M{"cdate": bson.M{"$gte": start}})
+	cnt, err := query.Count()
+	if err != nil {
+		revel.WARN.Printf("Unable to count blog: error %v", err)
+	}
+	return cnt
+}

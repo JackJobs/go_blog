@@ -1,8 +1,9 @@
 package controllers
 
 import (
-	"github.com/revel/revel"
 	"MyTest/app/models"
+	"github.com/revel/revel"
+	"time"
 )
 
 type App struct {
@@ -19,7 +20,9 @@ func (c App) Index() revel.Result {
 	defer dao.Close()
 	//读取所有的博客文章
 	blogs := dao.FindBlogs()
-	return c.Render(blogs)
+	now := time.Now().Add(-1 * time.Hour)
+	recentCnt := dao.FindBlogsByDate(now)
+	return c.Render(blogs, recentCnt)
 }
 
 func (c App) WBlog() revel.Result {
@@ -41,7 +44,7 @@ func (c App) BlogInfor(id string, rcnt int) revel.Result {
 	comments := dao.FindCommentsByBlogId(blog.Id)
 	if len(comments) == 0 && blog.CommentCnt != 0 {
 		blog.CommentCnt = 0
-		dao.UpdateBlogById(id ,blog)
+		dao.UpdateBlogById(id, blog)
 	} else if len(comments) != blog.CommentCnt {
 		blog.CommentCnt = len(comments)
 		dao.UpdateBlogById(id, blog)
@@ -76,24 +79,3 @@ func (c App) History() revel.Result {
 	}
 	return c.Render(histories)
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
