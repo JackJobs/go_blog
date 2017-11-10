@@ -89,6 +89,14 @@ func (blog *Blog) GetShortContent() string {
 	return blog.Subject
 }
 
+func (dao *Dao) FindBlogsByYear(year int) []Blog {
+	blogCollection := dao.session.DB(DbName).C(BlogCollection)
+	blogs := []Blog{}
+	query := blogCollection.Find(bson.M{"year": year}).Sort("-cdate")
+	query.All(&blogs)
+	return blogs
+}
+
 
 
 

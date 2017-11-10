@@ -14,7 +14,7 @@ GET     /bloginfor/:id/:rcnt                    App.BlogInfor
 POST    /docomment                              WComment.Docomment
 GET     /message                                App.Message
 POST    /putmessage                             WMessage.Putup
-
+GET     /history                                App.History
 
 # Ignore favicon requests
 GET     /favicon.ico                            404

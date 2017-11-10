@@ -62,6 +62,21 @@ func (c App) Message() revel.Result {
 	return c.Render()
 }
 
+func (c App) History() revel.Result {
+	dao, err := models.NewDao()
+	if err != nil {
+		c.Response.Status = 500
+		return c.RenderError(err)
+	}
+	defer dao.Close()
+	dao.CreateAllHistory()
+	histories := dao.FindHistory()
+	for i, _ := range histories {
+		histories[i].Blogs = dao.FindBlogsByYear(histories[i].Year)
+	}
+	return c.Render(histories)
+}
+
 
 
 
