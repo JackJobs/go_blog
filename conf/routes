@@ -15,6 +15,7 @@ POST    /docomment                              WComment.Docomment
 GET     /message                                App.Message
 POST    /putmessage                             WMessage.Putup
 GET     /history                                App.History
+GET     /about                                  App.About
 
 # Ignore favicon requests
 GET     /favicon.ico                            404

@@ -62,7 +62,6 @@ func (c App) Message() revel.Result {
 	//dao := models.NewDao(c.MongoSession)
 	messages := dao.FindAllMessages()
 	return c.Render(messages)
-	return c.Render()
 }
 
 func (c App) History() revel.Result {
@@ -78,4 +77,8 @@ func (c App) History() revel.Result {
 		histories[i].Blogs = dao.FindBlogsByYear(histories[i].Year)
 	}
 	return c.Render(histories)
+}
+
+func (c App) About() revel.Result {
+	return c.Render()
 }
